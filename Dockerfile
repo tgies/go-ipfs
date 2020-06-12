@@ -84,7 +84,7 @@ EXPOSE 8081
 
 # Create the fs-repo directory and switch to a non-privileged user.
 ENV IPFS_PATH /data/ipfs
-ENV IPFS_UID 1000
+ENV IPFS_UID 1031
 RUN mkdir -p $IPFS_PATH \
   && adduser -D -h $IPFS_PATH -u $IPFS_UID -G users ipfs \
   && chown ipfs:users $IPFS_PATH
